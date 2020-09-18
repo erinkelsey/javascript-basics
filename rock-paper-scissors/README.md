@@ -1,8 +1,6 @@
 # Rock, Paper, Scissors
 
-Basic JavaScript Rock, Paper, Scissors game.
-
-Hosted example:
+Basic Rock, Paper, Scissors game implemented with JavaScript.
 
 # Run
 
