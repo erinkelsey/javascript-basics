@@ -1,5 +1,11 @@
+/**
+ * DOM Element
+ */
 const startGameBtn = document.getElementById("start-game-btn");
 
+/**
+ * Constants
+ */
 const ROCK = "ROCK";
 const PAPER = "PAPER";
 const SCISSORS = "SCISSORS";
@@ -10,6 +16,11 @@ const RESULT_COMPUTER_WINS = "COMPUTER_WINS";
 
 let gameIsRunning = false;
 
+/**
+ * Get the user's choice from a prompt.
+ *
+ * Choice must be either ROCK, PAPER, or SCISSORS (not case-sensitive).
+ */
 const getPlayerChoice = () => {
   const selection = prompt(
     `${ROCK}, ${PAPER}, or ${SCISSORS}?`,
@@ -22,6 +33,9 @@ const getPlayerChoice = () => {
   return selection;
 };
 
+/**
+ * Calculate the computer's choice randomly.
+ */
 const getComputerChoice = () => {
   const randomValue = Math.random();
   if (randomValue < 0.34) {
@@ -33,6 +47,11 @@ const getComputerChoice = () => {
   }
 };
 
+/**
+ * Calculate the winner of the game between the user and computer.
+ * @param {String} cChoice: the computer's choice (ROCK, PAPER, SCISSORS)
+ * @param {String} pChoice: the player's choice (ROCK, PAPER, SCISSORS)
+ */
 const getWinner = (cChoice, pChoice) => {
   if (cChoice === pChoice) {
     return RESULT_DRAW;
@@ -47,6 +66,12 @@ const getWinner = (cChoice, pChoice) => {
   }
 };
 
+/**
+ * Create the message to show the user about who won the game.
+ * @param {String} winner: who was the winner (RESULT_DRAW, RESULT_PLAYER_WINS, RESULT_COMPUTER_WINS)
+ * @param {String} pChoice: the player's choice (ROCK, PAPER, SCISSORS)
+ * @param {String} cChoice: the computer's choice (ROCK, PAPER, SCISSORS)
+ */
 const getGameResultMessage = (winner, pChoice, cChoice) => {
   let message = `You picked ${pChoice}, computer picked ${cChoice}, therefore you `;
   if (winner === RESULT_DRAW) {
@@ -60,6 +85,9 @@ const getGameResultMessage = (winner, pChoice, cChoice) => {
   return message;
 };
 
+/**
+ * Play the game.
+ */
 const playGame = () => {
   const playerChoice = getPlayerChoice();
   const computerChoice = getComputerChoice();
@@ -67,6 +95,9 @@ const playGame = () => {
   alert(getGameResultMessage(winner, playerChoice, computerChoice));
 };
 
+/**
+ * Event listener for the Start Game button.
+ */
 startGameBtn.addEventListener("click", () => {
   if (gameIsRunning) return;
   gameIsRunning = true;
