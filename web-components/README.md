@@ -12,6 +12,13 @@ Custom HTML elements implemented with vanilla JavaScript.
 ### Shadow DOM
 
 - Manage a separate DOM node tree for your HTML elements (including scoped CSS styles)
+- In the constructor of the custom HTML element:
+
+      this.attachShadow({ mode: 'open' });
+
+- Be sure to add any children to the shadow root, so that they are in the Shadow DOM, for example:
+
+      this.shadowRoot.appendChild(tooltipIcon);
 
 ### Templates & Slots
 
