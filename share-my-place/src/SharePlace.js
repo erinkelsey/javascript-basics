@@ -45,7 +45,7 @@ class PlaceFinder {
     const sharedLinkInputElement = document.getElementById("share-link");
     sharedLinkInputElement.value = `${
       location.origin
-    }/my-place?address=${encodeURI(address)}&lat=${coordinates.lat}&lng=${
+    }/my-place/?address=${encodeURI(address)}&lat=${coordinates.lat}&lng=${
       coordinates.lng
     }`;
   }
