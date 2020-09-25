@@ -1,6 +1,6 @@
 # Testing Basics
 
-Basic JavaScript project to show basics of unit, integration and end-to-end testing, using Jest.
+JavaScript project to show basics of unit, integration and end-to-end testing, using Jest and Puppeteer.
 
 # Install
 
@@ -9,3 +9,7 @@ Basic JavaScript project to show basics of unit, integration and end-to-end test
 # Run
 
     $ npm start
+
+# Run Tests
+
+    $ npm test
