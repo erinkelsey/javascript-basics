@@ -24,9 +24,7 @@ test("should test add user - e2e", async () => {
   });
 
   const page = await browser.newPage();
-  await page.goto(
-    "file:///Users/erinkelsey/Dropbox/Documents/03_Portfolio/javascript/javascript-basics/testing-basics/index.html"
-  );
+  await page.goto("add_file_location_here");
 
   await page.click("input#name");
   await page.type("input#name", "Anna");
