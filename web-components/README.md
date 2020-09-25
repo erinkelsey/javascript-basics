@@ -16,3 +16,18 @@ Custom HTML elements implemented with vanilla JavaScript.
 ### Templates & Slots
 
 - Write HTML templates that you can add to your HTML elements
+
+### Web Component Lifecycle
+
+- constructor()
+  - element created
+  - basic initializations
+- connectedCallback()
+  - element attached to DOM
+  - DOM initializations
+- disconnectedCallback()
+  - element detached from DOM
+  - cleanup work
+- attributeChangedCallback()
+  - observed attribute updated
+  - update data + DOM
