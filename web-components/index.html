@@ -8,11 +8,11 @@
   </head>
   <body>
     <template id="tooltip-template">
-      <span> (?)</span>
+      <slot>Some default</slot><span> (?)</span>
     </template>
     <p>
       <uc-tooltip text="So aweomse!">Web Components</uc-tooltip> are awesome!
     </p>
-    <p><uc-tooltip>Web Components</uc-tooltip> are not awesome!</p>
+    <p><uc-tooltip></uc-tooltip> are not awesome!</p>
   </body>
 </html>
