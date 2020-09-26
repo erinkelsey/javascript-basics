@@ -13,7 +13,7 @@ class Tooltip extends HTMLElement {
           color: white;
           position: absolute;
           top: 1.5rem;
-          left: 0.75rem
+          left: 0.75rem;
           z-index: 1000;
           padding: 0.15rem;
           border-radius: 3px;

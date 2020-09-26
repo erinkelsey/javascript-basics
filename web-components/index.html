@@ -12,20 +12,43 @@
         --color-primary: lightblue;
         font-family: sans-serif;
       }
+      body {
+        margin: 2rem;
+      }
     </style>
     <script src="tooltip.js" defer></script>
     <script src="confirm-link.js" defer></script>
+    <script src="modal.js" defer></script>
   </head>
   <body>
     <template id="tooltip-template"> </template>
+    <p>Custom HTML Element Example:</p>
     <p>
-      <uc-tooltip text="Web Components are a set of standards."
-        ><span class="highlight">Web Components</span></uc-tooltip
-      >
+      <uc-tooltip text="Web Components are a set of standards.">
+        <span class="highlight">Web Components</span>
+      </uc-tooltip>
       are awesome!
     </p>
     <p><uc-tooltip></uc-tooltip> are not awesome!</p>
 
+    <br /><br />
+    <p>Extending HTML Element Example:</p>
     <a is="uc-confirm-link" href="https://www.google.com">Google</a>
+
+    <br /><br /><br />
+    <uc-modal>
+      <h1 slot="title">Please Confirm</h1>
+      <p>With your confirmation, you agree this modal is awesome!</p>
+    </uc-modal>
+    <p>Custom HTML Element Modal Example:</p>
+    <button>Show Modal</button>
+    <script>
+      const confirmButton = document.querySelector("button");
+      const modal = document.querySelector("uc-modal");
+      confirmButton.addEventListener("click", () => {
+        // modal.setAttribute("opened", "");
+        modal.open();
+      });
+    </script>
   </body>
 </html>
